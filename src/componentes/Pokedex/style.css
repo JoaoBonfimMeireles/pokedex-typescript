@@ -1,0 +1,8 @@
+.card-pokedex {
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  background-color: aqua;
+}

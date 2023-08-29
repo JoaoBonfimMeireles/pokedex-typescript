@@ -1,0 +1,27 @@
+.box-pokedex-text {
+  width: 19.125rem;
+  display: flex;
+  align-items: left;
+  margin: 0 auto;
+  flex-direction: column;
+  background: rgb(56, 56, 56);
+  padding: 16px;
+}
+
+.box-pokedex-text span {
+  margin: 0px 0px 0.35em;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.334;
+  color: #fff;
+}
+
+.box-pokedex-text p {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: rgba(138, 125, 125, 0.7);
+}

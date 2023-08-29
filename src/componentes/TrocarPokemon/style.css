@@ -1,0 +1,25 @@
+.button-trocar-pokemon {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.334;
+  margin: 0rem auto 1rem;
+  width: 19.125rem;
+  transition: 1200ms cubic-bezier(0.075, 0.82, 0.165, 1); 
+}
+
+.button-trocar-pokemon button {
+  cursor: pointer;
+  padding: 1.2rem 0;
+  border-radius: 5px;
+  border-style: none;
+  background: rgb(245, 241, 241);
+}
+
+.button-trocar-pokemon button:hover {
+  background: rgba(153, 153, 153, 0.692);
+}
+
+

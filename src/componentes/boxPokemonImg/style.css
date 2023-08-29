@@ -1,0 +1,27 @@
+.box-img-pokemon{
+  position: relative;
+  width: 19.125rem;
+  margin: 0 auto;
+}
+
+.box-first-background img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 19.125rem;
+  height: 14.35rem;
+  margin-bottom: -4px;
+}
+
+.box-first-img {
+  width: 10rem;
+  height: 0rem;;
+}
+
+.box-first-img img {
+  position: absolute;
+  left: 4.5rem;
+  top: 2.5rem;
+  width: 10rem;
+  max-height: 9rem;
+  height: 9rem;;
+}
