@@ -1,9 +1,9 @@
 import "./style.css";
 
-export default function TrocarPokemon(props:any) {
+export default function TrocarPokemon() {
   return (
     <div className="button-trocar-pokemon">
-        <button onClick={props.alterarState}>Mudar Animal</button>
+        <button>Mudar Animal</button>
     </div>
   );
 }

@@ -4,8 +4,8 @@ import "./style.css";
 import BoxPokemonSearch from "../BoxPokemonSearch";
 import TrocarPokemon from "../TrocarPokemon";
 import BoxPokemonText from "../BoxPokemonText";
-import BoxPokemonImg from '../boxPokemonImg';
 import BoxPokemonButton from '../boxPokemonButton';
+import BoxPokemonImg from '../boxPokemonImg';
 
 
 interface Pokemon {
@@ -19,6 +19,7 @@ interface Pokemon {
 
 export function Pokedex() {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
+  const [filteredPokemonList, setFilteredPokemonList] = useState<Pokemon[]>([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -27,6 +28,9 @@ export function Pokedex() {
         const data: Pokemon[] = response.data;
 
         setPokemonList(data);
+
+        const firePokemon = data.filter(pokemon => pokemon.category === "Fire");
+        setFilteredPokemonList(firePokemon);
       } catch (error) {
         console.error(error);
       }
@@ -37,16 +41,15 @@ export function Pokedex() {
 
   return (
     <div className="card-pokedex">
-      {pokemonList.map(pokemon => (
+      {filteredPokemonList.map(pokemon => (
         <div key={pokemon.id}>
-          <BoxPokemonSearch />
+          <BoxPokemonSearch alterarPokemon={TrocarPokemon}/>
           <TrocarPokemon />
-          <BoxPokemonImg image_url={pokemon.image_url} background_image_url={pokemon.background_image_url}/>
-          <BoxPokemonText  name={pokemon.name} category={pokemon.category} />
+          <BoxPokemonImg background_image_url={pokemon.background_image_url} image_url={pokemon.image_url}/>
+          <BoxPokemonText name={pokemon.name} category={pokemon.category} />
           <BoxPokemonButton />
         </div>
       ))}
-
     </div>
   );
 }

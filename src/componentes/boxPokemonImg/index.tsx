@@ -16,7 +16,7 @@ export function BoxPokemonImg(props: BoxPokemonImgProps) {
         <img src={props.background_image_url}  alt="Imagem de um Pokemon" />
       </div>
       <div className="box-first-img">
-        <img src={props.image_url}alt="Imagem de um Pokemon" />
+        <img src={props.image_url} alt="Imagem de um Pokemon" />
       </div>
     </header>
   );

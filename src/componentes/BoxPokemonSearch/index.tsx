@@ -2,6 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import axios from 'axios';
 import "./style.css";
 
+interface Props {
+  alterarPokemon: (nome: string) => void;
+}
+
 interface Pokemon {
   id: number;
   name: string;
@@ -11,7 +15,7 @@ interface Pokemon {
   created_at?: number;
 }
 
-function BoxPokemonSearch() {
+function BoxPokemonSearch(props: Props) {
   const [open, setOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [selecNome, setSelectNome] = useState<string | null>(null);
@@ -43,18 +47,25 @@ function BoxPokemonSearch() {
   };
 
   const handleItemClick = (nome: string) => {
+    props.alterarPokemon(nome);
     setSelectNome(nome);
     setOpen(false);
   };
 
-  window.addEventListener("click", handleClickOutsideDropdown);
+  useEffect(() => {
+    window.addEventListener("click", handleClickOutsideDropdown);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutsideDropdown);
+    };
+  }, []);
 
   console.log(open);
   console.log(selecNome);
 
   return (
     <div className="box-search-text" ref={dropdownRef}>
-      <button className="search-pokemons" onClick={(e) => handleDropDownFocus(open)}>Pokemon</button>
+      <button className="search-pokemons" onClick={() => handleDropDownFocus(open)}>Pokemon</button>
       {open && (
         <ul className="list-pokemons">
           {pokemonList.map((pokemon) => (

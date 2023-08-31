@@ -27,15 +27,18 @@
 }
 
 .list-pokemons {
-  top: 3.3rem;
-  border-radius: 5px;
-  list-style: none;
-  margin-top: 0.1rem;
-  background: rgb(245, 241, 241);
-  font-size: 1.2rem;
-  z-index: 1;
-  position: absolute;
-  width: 19.125rem;
+    max-height: 250px;
+    overflow: hidden;
+    top: 3.3rem;
+    overflow-y: scroll;
+    border-radius: 5px;
+    list-style: none;
+    margin-top: 0.1rem;
+    background: rgb(245, 241, 241);
+    font-size: 1.2rem;
+    z-index: 1;
+    position: absolute;
+    width: 19.125rem;
 }
 
 .list-pokemons li {
