@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto:
 
-Pokedex com input de pesquisa.
+Pokedex com Drop Down.
 
 ---
 
