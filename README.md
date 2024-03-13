@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React
 - TypeScript
 - API
-- Git e Github
+- Github
 - HTML e CSS
 
 ## 💻 Projeto:
