@@ -9,6 +9,7 @@
   <img alt="projeto DevLinks" src="/public/assets/null.png" width="49%">
   <img alt="projeto DevLinks" src="/public/assets/search.png" width="49%">
 </p>
+
 ## ⚙️ Como rodar o projeto:
 
 - Instalar o Node.js
